@@ -6,16 +6,16 @@ import TerritoryOfOperation from "./components/TerritoryOfOperation"
 
 function App() {
   return (
-    < div className="w-full relative overflow-x-hidden text-center" >
+    < div className="w-full relative overflow-x-hidden text-center min-h-screen" >
 
-      < div
-        className="absolute inset-0 z-0 h-full"
+      <div
+        className="absolute inset-0 z-0"
         style={{
           backgroundImage: `
-        radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #f59e0b 100%)
-      `,
-        }
-        }
+        radial-gradient(125% 130% at 50% 90%, #ffffff 40%, #f59e0b 100%)
+      `,
+          backgroundSize: "100% 100%",
+        }}
       />
 
       < NavBar logoSrc={logo} />
@@ -36,22 +36,22 @@ function App() {
         </div >
       </div >
 
-      {/* 🟢 METRICS: Adicionado bg-transparent */}
       < div className="w-full py-5 md:py-5 relative z-10 bg-transparent" >
         <HeroMetrics />
       </div >
 
-      {/* 🟢 SERVICES: Adicionado bg-transparent */}
       < div className="relative z-10 bg-transparent" >
         <Services />
       </div >
 
-      {/* 🟢 TERRITORY: Adicionado bg-transparent */}
-      < div className="relative z-10 bg-transparent" >
+      <div className="relative z-10 bg-transparent">
         <TerritoryOfOperation />
-      </div >
+      </div>
+
     </div >
   )
 }
 
 export default App
+
+

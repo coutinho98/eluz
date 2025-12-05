@@ -70,7 +70,7 @@ const Services = () => {
     ];
 
     return (
-        <div id="servicos" className="w-full bg-gray-50 py-24 px-4 md:px-8">
+        <div id="servicos" className="w-full bg-transparent py-24 px-4 md:px-8">
             <div className="max-w-7xl mx-auto text-center">
 
 
