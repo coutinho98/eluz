@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'; 
 import NavBar from "./components/Navbar"
 import Home from './pages/Home';
-import ProtectionPage from './pages/ProtectionPage';
+/* import ProtectionPage from './pages/ProtectionPage'; */
 import logo from "./assets/images/logo.png"
 
 function App() {
