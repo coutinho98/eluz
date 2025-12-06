@@ -60,21 +60,21 @@ const TerritoryOfOperation = () => {
     };
 
     return (
-        <div id="territorio" className="w-full bg-white py-20 px-4 md:px-8">
+        <div id="territorio" className="w-full  py-20 px-4 md:px-8">
             <div className="max-w-7xl mx-auto text-center">
 
                 <h3 className="text-5xl font-bold text-gray-900 mb-4 font-[ranade]">
                     Território de Atuação
                 </h3>
 
-                <p className="text-2xl text-gray-600 max-w-3xl mx-auto mb-5 font-[ranade]">
+                <p className=" text-gray-600 max-w-3xl mx-auto mb-4 font-[ranade]">
                     Atuação direta na Bahia, Sergipe e Alagoas, com parceiros estratégicos que nos permitem abranger quase toda a região Norte, Nordeste e Sudeste.
                 </p>
 
                 <div
                     id="map-tooltip"
                     className={`
-                        text-xl font-bold text-gray-800 p-3 mb-8 
+                        text-xl font-bold text-gray-800 p-3 mb-4 
                         min-h-[50px] transition-opacity duration-300
                         ${tooltipContent ? 'opacity-100' : 'opacity-0'}
                     `}

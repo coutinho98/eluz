@@ -1,22 +1,23 @@
-import React from 'react';
 import { Zap, TrendingUp, DollarSign, Scale, Wrench, BarChart2, Thermometer, Briefcase } from 'lucide-react';
 
 interface ServiceCardProps {
     title: string;
     description: string;
-    details: string;
+    details?: string; 
     IconComponent: React.ElementType;
-    link: string;
+    link?: string; 
 }
 
 const Services = () => {
     const ServiceCard = ({ title, description, IconComponent }: ServiceCardProps) => (
-        <div className="p-6 text-left">
-            <IconComponent className="w-8 h-8 text-black mb-4" />
+        <div className="p-6 text-left group transition duration-300 ">
+
+            <IconComponent
+                className="w-8 h-8 text-black mb-4 transition duration-300 group-hover:transform group-hover:-translate-y-1"
+            />
 
             <h4 className="text-xl font-bold text-gray-900 mb-3 font-[ranade]">{title}</h4>
             <p className="text-gray-600 mb-4 text-base">{description}</p>
-
         </div>
     );
 
@@ -70,14 +71,14 @@ const Services = () => {
     ];
 
     return (
-        <div id="servicos" className="w-full bg-transparent py-24 px-4 md:px-8">
+        <div id="servicos" className="w-full bg-transparent py-10 md:py-10 px-4 md:px-8">
             <div className="max-w-7xl mx-auto text-center">
 
 
-                <h4 className="font-[ranade] text-5xl font-bold text-gray-800 mb-10 text-left ">
+                <h4 className="font-[ranade] text-5xl font-bold text-gray-800 mb-10 text-left">
                     Gestão Contratual de Energia
                 </h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
                     {contractualServices.map((service, index) => (
                         <ServiceCard key={index} {...service} />
                     ))}
