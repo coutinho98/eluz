@@ -26,7 +26,7 @@ const NavBar: React.FC<NavBarProps> = ({ logoSrc }) => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
 
-                    <div className="flex-shrink-0">
+                    <div className="shrink-0">
                         <Link to="/" className="flex items-center">
                             <img className="h-20 w-auto" src={logoSrc} alt="Logo É Luz" />
                         </Link>
@@ -44,7 +44,7 @@ const NavBar: React.FC<NavBarProps> = ({ logoSrc }) => {
                         ))}
 
                         <Link
-                            to="/protecao-eletrica"
+                            to="/PDA&MPS"
                             className="flex items-center px-4 py-2 text-white bg-black  hover:bg-yellow-400 hover:text-black transition-all duration-300 font-semibold text-base "
                         >
                             PDA & MPS
@@ -85,7 +85,7 @@ const NavBar: React.FC<NavBarProps> = ({ logoSrc }) => {
                         ))}
 
                         <Link
-                            to="/protecao-eletrica"
+                            to="/PDA&MPS"
                             onClick={() => setIsOpen(false)}
                             className="flex items-center px-4 py-2 text-white bg-black justify-center  hover:bg-yellow-400 hover:text-black transition-all duration-300 font-semibold text-base"
                         >

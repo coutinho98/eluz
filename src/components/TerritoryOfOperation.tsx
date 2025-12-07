@@ -63,9 +63,9 @@ const TerritoryOfOperation = () => {
         <div id="territorio" className="w-full  py-20 px-4 md:px-8">
             <div className="max-w-7xl mx-auto text-center">
 
-                <h3 className="text-5xl font-bold text-gray-900 mb-4 font-[ranade]">
+                <h2 className="text-5xl font-bold text-gray-900 mb-4 font-[ranade]">
                     Território de Atuação
-                </h3>
+                </h2>
 
                 <p className=" text-gray-600 max-w-3xl mx-auto mb-4 font-[ranade]">
                     Atuação direta na Bahia, Sergipe e Alagoas, com parceiros estratégicos que nos permitem abranger quase toda a região Norte, Nordeste e Sudeste.
@@ -114,13 +114,13 @@ const TerritoryOfOperation = () => {
                                                                 outline: "none"
                                                             },
                                                             hover: {
-                                                                fill: COLOR_HOVER, 
+                                                                fill: COLOR_HOVER,
                                                                 stroke: "#333",
                                                                 strokeWidth: 1,
                                                                 outline: "none"
                                                             },
                                                             pressed: {
-                                                                fill: COLOR_DIRECT, 
+                                                                fill: COLOR_DIRECT,
                                                                 outline: "none"
                                                             }
                                                         }}

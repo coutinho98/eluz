@@ -3,9 +3,9 @@ import { Zap, TrendingUp, DollarSign, Scale, Wrench, BarChart2, Thermometer, Bri
 interface ServiceCardProps {
     title: string;
     description: string;
-    details?: string; 
+    details?: string;
     IconComponent: React.ElementType;
-    link?: string; 
+    link?: string;
 }
 
 const Services = () => {
@@ -74,22 +74,21 @@ const Services = () => {
         <div id="servicos" className="w-full bg-transparent py-10 md:py-10 px-4 md:px-8">
             <div className="max-w-7xl mx-auto text-center">
 
-
-                <h4 className="font-[ranade] text-5xl font-bold text-gray-800 mb-10 text-left">
+                <h2 className="font-[ranade] text-5xl font-bold text-gray-800 mb-10 text-left">
                     Gestão Contratual de Energia
-                </h4>
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-                    {contractualServices.map((service, index) => (
-                        <ServiceCard key={index} {...service} />
+                    {contractualServices.map((service) => (
+                        <ServiceCard key={service.title} {...service} />
                     ))}
                 </div>
 
-                <h4 className="font-[ranade] text-5xl font-bold text-gray-800 mb-10 text-left">
+                <h2 className="font-[ranade] text-5xl font-bold text-gray-800 mb-10 text-left">
                     Gestão de Qualidade de Energia
-                </h4>
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {qualityServices.map((service, index) => (
-                        <ServiceCard key={index} {...service} />
+                    {qualityServices.map((service) => (
+                        <ServiceCard key={service.title} {...service} />
                     ))}
                 </div>
 

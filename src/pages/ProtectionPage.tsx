@@ -47,7 +47,6 @@ const ProtectionPage = () => {
 
     return (
         <div className="w-full relative overflow-x-hidden min-h-screen">
-
             <header className="py-32 px-4 md:px-8 text-black bg-[#F7F5F2] w-full">
                 <div className="max-w-7xl mx-auto text-center">
                     <CloudLightning className="w-20 h-20 text-yellow-500 mx-auto mb-4" />
@@ -94,19 +93,18 @@ const ProtectionPage = () => {
 
             <section id="detalhes" className="w-full bg-gray-50 py-24 px-4 md:px-8">
                 <div className="max-w-7xl mx-auto text-left">
-
-                    <h3 className="font-[ranade] text-5xl font-bold text-gray-900 mb-4">
+                    <h2 className="font-[ranade] text-5xl font-bold text-gray-900 mb-4">
                         Nossos Pilares de Proteção
-                    </h3>
+                    </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mb-16">
                         Análise de Risco, Manutenção Preditiva e Conformidade com as normas NBR 5419.
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 text-left">
                         {protectionPillars.map((pillar, index) => (
-                            <ProtectionServiceCard 
-                                key={index} 
-                                title={pillar.title} 
+                            <ProtectionServiceCard
+                                key={index}
+                                title={pillar.title}
                                 IconComponent={pillar.IconComponent}
                                 description={pillar.description}
                             />
