@@ -89,7 +89,7 @@ const NavBar: React.FC<NavBarProps> = ({ logoSrc }) => {
                             onClick={() => setIsOpen(false)}
                             className="flex items-center px-4 py-2 text-white bg-black justify-center  hover:bg-yellow-400 hover:text-black transition-all duration-300 font-semibold text-base"
                         >
-                            PDA & MDS
+                            PDA & MPS
                         </Link>
                     </div>
                 </div>
