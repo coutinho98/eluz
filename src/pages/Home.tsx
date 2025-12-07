@@ -4,6 +4,7 @@ import TerritoryOfOperation from "../components/TerritoryOfOperation";
 import ContactSection from "../components/ContactSection";
 import backgroundImage from '../assets/images/logo.png';
 import FinalCTA from '../components/FinalCTA';
+import { motion } from 'motion/react';
 
 
 const Home = () => {
@@ -24,10 +25,17 @@ const Home = () => {
                             </h2>
                         </div>
                         <div className="w-full md:w-5/12 flex justify-center md:justify-end order-1 md:order-2 mb-6 md:mb-0">
-                            <img
+                            <motion.img
                                 src={backgroundImage}
                                 alt="Imagem Hero Section"
-                                className="w-auto h-auto max-w-full  "
+                                className="w-auto h-auto max-w-full"
+                                animate={{ y: [0, -10, 0] }}
+                                transition={{
+                                    duration: 4,
+                                    ease: "easeInOut",
+                                    repeat: Infinity,
+                                    repeatType: "loop"
+                                }}
                             />
                         </div>
                     </div>

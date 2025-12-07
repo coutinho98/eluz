@@ -11,10 +11,10 @@ const FinalCTA = () => {
 
                 <div className="flex flex-col md:flex-row items-center md:items-center md:space-x-16 w-full justify-center text-left">
                     <div className="w-full md:w-7/12 mb-10 md:mb-0">
-                        <h2 className="font-[ranade] text-gray-900 text-center font-extrabold text-4xl md:text-5xl leading-tight mb-6">
+                        <h2 className="font-[ranade] text-black text-center font-extrabold text-4xl md:text-5xl leading-tight mb-6">
                             {headline}
                         </h2>
-                        <p className="font-[ranade] text-gray-700 text-center text-lg mb-8">
+                        <p className="font-[ranade] text-gray-600 text-center text-lg mb-8">
                             {description}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

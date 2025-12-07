@@ -1,7 +1,7 @@
-import { Routes, Route } from 'react-router-dom'; 
+import { Routes, Route } from 'react-router-dom';
 import NavBar from "./components/Navbar"
 import Home from './pages/Home';
-/* import ProtectionPage from './pages/ProtectionPage'; */
+import ProtectionPage from './pages/ProtectionPage';
 import logo from "./assets/images/logo.png"
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/protecao-eletrica" element={<ProtectionPage />} /> */}
+        <Route path="/protecao-eletrica" element={<ProtectionPage />} />
       </Routes>
     </div>
   )
