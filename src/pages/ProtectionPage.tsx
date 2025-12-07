@@ -1,26 +1,50 @@
 import { CloudLightning, Zap, Shield, Globe, TrendingUp, DollarSign } from 'lucide-react';
 import ContactSection from '../components/ContactSection';
 
-const PURPLE_STRONG = "text-violet-700";
-
-interface ConceptCardProps {
+interface ProtectionServiceCardProps {
     title: string;
-    icon: React.ElementType;
-    children: React.ReactNode;
+    description: string;
+    IconComponent: React.ElementType;
 }
 
-const ConceptCard: React.FC<ConceptCardProps> = ({ title, icon: Icon, children }) => (
-    <div className="p-6 bg-white rounded-xl shadow-lg border border-violet-100/50 hover:shadow-xl transition-shadow duration-300 h-full">
-        <Icon className="w-8 h-8 text-black mr-4" />
-        <h4 className="text-xl font-bold text-gray-900 font-[ranade]">{title}</h4>
-        <div className="text-gray-700 space-y-3 text-base">
-            {children}
-        </div>
+const ProtectionServiceCard = ({ title, description, IconComponent }: ProtectionServiceCardProps) => (
+    <div className="p-6 text-left group transition duration-300 ">
+
+        <IconComponent
+            className="w-8 h-8 text-black mb-4 transition duration-300 group-hover:transform group-hover:-translate-y-1"
+        />
+
+        <h4 className="text-xl font-bold text-gray-900 mb-3 font-[ranade]">{title}</h4>
+        <p className="text-gray-600 mb-4 text-base">{description}</p>
     </div>
 );
 
 
 const ProtectionPage = () => {
+
+    const protectionPillars = [
+        {
+            title: "SPDA (Para-raios)",
+            description: "O Sistema de Proteção Contra Descargas Atmosféricas é o para-raios que recebe e direciona a energia dos raios de forma segura para o solo. Fazemos a inspeção e manutenção anual obrigatória, emitindo os laudos para garantir a segurança da edificação e evitar multas onerosas.",
+            IconComponent: Zap,
+        },
+        {
+            title: "MPS e DPS",
+            description: "O MPS (Medidas de Proteção Contra Surtos) utiliza o DPS (Dispositivo de Proteção Contra Surtos) para proteger sua rede contra picos de tensão e corrente. Surtos danificam eletrônicos e são causados por raios distantes ou manobras da concessionária. A instalação de DPS é crucial em todas as edificações.",
+            IconComponent: Shield,
+        },
+        {
+            title: "Aterramento Elétrico",
+            description: "Fornece um caminho seguro para correntes elétricas indesejadas fluírem para a terra. É vital para a proteção de pessoas contra choques e a preservação de equipamentos, funcionando como uma 'válvula de segurança' para correntes de fuga e curtos-circuitos.",
+            IconComponent: Globe,
+        },
+        {
+            title: "Gerenciamento de Risco (Laudo)",
+            description: "Realizamos o estudo de Gerenciamento de Risco de SPDA para determinar o Nível de Proteção necessário, seguindo a NBR 5419:2015. Este estudo é a base para a implementação do sistema e garante que a proteção esteja dimensionada corretamente para o seu tipo de edificação e atividade.",
+            IconComponent: Shield,
+        },
+    ];
+
     return (
         <div className="w-full relative overflow-x-hidden min-h-screen">
 
@@ -79,31 +103,17 @@ const ProtectionPage = () => {
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 text-left">
-
-                        <ConceptCard title="SPDA (Para-raios)" icon={Zap}>
-                            <p>O Sistema de Proteção Contra Descargas Atmosféricas é o para-raios que recebe e direciona a energia dos raios de forma segura para o solo.</p>
-                            <p>Fazemos a inspeção e manutenção anual obrigatória, emitindo os laudos para garantir a segurança da edificação e evitar multas onerosas.</p>
-                        </ConceptCard>
-
-                        <ConceptCard title="MPS e DPS" icon={Shield}>
-                            <p>O MPS (Medidas de Proteção Contra Surtos) utiliza o DPS (Dispositivo de Proteção Contra Surtos) para proteger sua rede contra picos de tensão e corrente.</p>
-                            <p>Surtos danificam eletrônicos e são causados por raios distantes ou manobras da concessionária. A instalação de DPS é crucial em todas as edificações.</p>
-                        </ConceptCard>
-
-                        <ConceptCard title="Aterramento Elétrico" icon={Globe}>
-                            <p>Fornece um caminho seguro para correntes elétricas indesejadas fluírem para a terra.</p>
-                            <p>É vital para a proteção de pessoas contra choques e a preservação de equipamentos, funcionando como uma "válvula de segurança" para correntes de fuga e curtos-circuitos.</p>
-                        </ConceptCard>
-
-                        <ConceptCard title="Gerenciamento de Risco (Laudo)" icon={Shield}>
-                            <p>Realizamos o estudo de Gerenciamento de Risco de SPDA para determinar o Nível de Proteção necessário, seguindo a NBR 5419:2015.</p>
-                            <p>Este estudo é a base para a implementação do sistema e garante que a proteção esteja dimensionada corretamente para o seu tipo de edificação e atividade.</p>
-                        </ConceptCard>
-
+                        {protectionPillars.map((pillar, index) => (
+                            <ProtectionServiceCard 
+                                key={index} 
+                                title={pillar.title} 
+                                IconComponent={pillar.IconComponent}
+                                description={pillar.description}
+                            />
+                        ))}
                     </div>
                 </div>
             </section>
-            {/* CONTATO (Reutilizando a seção da Home) */}
             <div className="relative z-10 bg-transparent">
                 <ContactSection />
             </div>
