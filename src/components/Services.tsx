@@ -1,8 +1,8 @@
 import migrationImage from '@/assets/images/free_energy_market_migration.png';
 import managementImage from '@/assets/images/free_energy_market_management.png';
-import taxRecoveryImage from '@/assets/images/tax_recovery.png';
+import taxRecoveryImage from '@/assets/images/tariff_framing_spreadsheet_growth.png';
 import tariffFramingImage from '@/assets/images/tariff_framing.png';
-import powerFactorImage from '@/assets/images/power_quality_analysis.png';
+import powerFactorImage from '@/assets/images/power_factor_correction.png';
 import qualityAnalysisImage from '@/assets/images/power_quality_analysis.png'; 
 import thermographyImage from '@/assets/images/applied_thermography.png';
 import assemblyMaintenanceImage from '@/assets/images/assembly_maintenance.png';
@@ -22,7 +22,7 @@ const Services = () => {
             <img
                 src={imageSrc}
                 alt={title}
-                className="w-70 h-70 object-contain mx-auto block "
+                className="w-full h-70 object-contain mx-auto block "
             />
             <h4 className="text-xl font-bold text-gray-900 mb-3 font-[ranade]">{title}</h4>
             <p className="text-gray-600 mb-4 text-base">{description}</p>
@@ -43,12 +43,12 @@ const Services = () => {
         {
             title: "Recuperação de Impostos Pagos Indevidamente",
             description: "Análise de cobranças indevidas dos últimos 5 anos. Cerca de 25% do valor total da fatura é composta por impostos, e podemos obter créditos para abatimento mensal.",
-            imageSrc: taxRecoveryImage,
+            imageSrc: tariffFramingImage,
         },
         {
             title: "Enquadramento Tarifário",
             description: "Análise gratuita da fatura para identificar a modalidade tarifária ideal e evitar cobranças acima do valor normal. Esse é um erro comum nas faturas de energia.",
-            imageSrc: tariffFramingImage,
+            imageSrc: taxRecoveryImage,
         },
     ];
 
@@ -99,7 +99,6 @@ const Services = () => {
                         <ServiceCard key={service.title} {...service} />
                     ))}
                 </div>
-
             </div>
         </div>
     );
