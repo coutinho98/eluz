@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Target, Award, BookOpen, Zap, MapPin } from 'lucide-react';
+import {  Award, BookOpen, MapPin } from 'lucide-react';
 import ContactSection from '../components/ContactSection';
 import { ComposableMap, Geographies, Geography, ZoomableGroup } from '@vnedyalk0v/react19-simple-maps';
 import { useMemo, useState, useEffect } from 'react';
@@ -18,7 +18,7 @@ const AboutPage = () => {
     const COLOR_HOVER = "#ca8a04";
 
     const [geoData, setGeoData] = useState<any>(null);
-    const [tooltipContent, setTooltipContent] = useState("");
+    const [_tooltipContent, setTooltipContent] = useState("");
 
     const directStatesSet = useMemo(() => new Set(statesData.direct), []);
     const partnersStatesSet = useMemo(() => new Set(statesData.partners), []);
