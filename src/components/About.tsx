@@ -59,8 +59,8 @@ const AboutPage = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-4xl text-left md:text-center md:text-7xl font-[ranade] font-bold text-gray-900 mb-6"
                     >
-                        Nossa História e <br />
-                       Compromisso Técnico
+                        Nossa história e <br />
+                       compromisso técnico
                     </motion.h1>
                     <p className="text-xl md:text-center text-left text-gray-500 max-w-2xl mx-auto font-light">
                       Desvendando os segredos da eficiência energética para transformar a realidade de custos da sua empresa.
@@ -68,13 +68,12 @@ const AboutPage = () => {
                 </div>
             </section>
 
-            {/* História e Missão */}
             <section className="py-24 px-4 md:px-8">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                     <div className="space-y-8">
                         <div>
                             <h2 className="text-sm text-left font-bold text-yellow-600 uppercase tracking-widest mb-2">Trajetória</h2>
-                            <h3 className="text-4xl font-[ranade] font-bold text-gray-900 mb-6 text-left">Fundada na Experiência</h3>
+                            <h3 className="text-4xl font-[ranade] font-bold text-gray-900 mb-6 text-left">Fundada na experiência</h3>
                             <p className="text-lg text-gray-600 leading-relaxed text-left">
                                 A <strong>Éluz</strong> foi fundada em 2020 pelo técnico responsável <strong>Alan Gonçalves</strong>. Nossa base sólida vem de mais de 10 anos de atuação como consultor técnico e professor na área de tecnologias elétricas.
                             </p>
@@ -99,7 +98,7 @@ const AboutPage = () => {
                         className="bg-gray-900 text-white p-10 md:p-14 rounded-[2.5rem] shadow-2xl relative overflow-hidden"
                     >
                         <div className="relative z-10 text-left">
-                            <h3 className="text-3xl font-[ranade] font-bold mb-6">Nossa Missão</h3>
+                            <h3 className="text-3xl font-[ranade] font-bold mb-6">Nossa missão</h3>
                             <p className="text-xl text-gray-300 mb-8 leading-relaxed font-light italic">
                                 "Identificar as irregularidades nas faturas de energia através de auditoria elétrica, oferecendo soluções para reduzir o valor mensal tanto no mercado cativo quanto no livre".
                             </p>
