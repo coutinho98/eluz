@@ -3,6 +3,7 @@ import NavBar from "./components/Navbar"
 import Home from './pages/Home';
 import ProtectionPage from './pages/ProtectionPage';
 import logo from "./assets/images/logo.png"
+import AboutPage from './components/About';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/PDA&MPS" element={<ProtectionPage />} />
+        <Route path="/sobre" element={<AboutPage />} />
       </Routes>
     </div>
   )

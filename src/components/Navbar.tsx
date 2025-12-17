@@ -14,7 +14,7 @@ const NavBar: React.FC<NavBarProps> = ({ logoSrc }) => {
     };
 
     const navItems = [
-        { name: "Sobre", href: "/#sobre", isExternalLink: false },
+        { name: "Sobre", href: "/sobre", isExternalLink: false },
         { name: "Vantagens", href: "/#vantagens", isExternalLink: false },
         { name: "Serviços", href: "/#servicos", isExternalLink: false },
         { name: "Território", href: "/#territorio", isExternalLink: false },
