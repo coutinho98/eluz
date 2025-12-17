@@ -1,52 +1,59 @@
-import { CloudLightning, Zap, Shield, Globe, TrendingUp, DollarSign } from 'lucide-react';
+
+import { CloudLightning, Shield, TrendingUp, DollarSign } from 'lucide-react';
 import ContactSection from '../components/ContactSection';
+
+import spdaImage from '../assets/images/spda_lightning_rod.png';
+import mpsImage from '../assets/images/mps_dps_surge_protection.png';
+import groundingImage from '../assets/images/electrical_grounding.png';
+import riskImage from '../assets/images/risk_management_report.png';
+import TerritoryOfOperation from '../components/TerritoryOfOperation';
+import FinalCTA from '../components/FinalCTA';
 
 interface ProtectionServiceCardProps {
     title: string;
     description: string;
-    IconComponent: React.ElementType;
+    imageSrc: string;
 }
 
-const ProtectionServiceCard = ({ title, description, IconComponent }: ProtectionServiceCardProps) => (
-    <div className="p-6 text-left group transition duration-300 ">
-
-        <IconComponent
-            className="w-8 h-8 text-black mb-4 transition duration-300 group-hover:transform group-hover:-translate-y-1"
+const ProtectionServiceCard = ({ title, description, imageSrc }: ProtectionServiceCardProps) => (
+    <div className="text-left group transition duration-300">
+        <img
+            src={imageSrc}
+            alt={title}
+            className="w-full object-contain mb-4"
         />
-
         <h4 className="text-xl font-bold text-gray-900 mb-3 font-[ranade]">{title}</h4>
         <p className="text-gray-600 mb-4 text-base">{description}</p>
     </div>
 );
 
-
 const ProtectionPage = () => {
-
     const protectionPillars = [
         {
             title: "SPDA (Para-raios)",
             description: "O Sistema de Proteção Contra Descargas Atmosféricas é o para-raios que recebe e direciona a energia dos raios de forma segura para o solo. Fazemos a inspeção e manutenção anual obrigatória, emitindo os laudos para garantir a segurança da edificação e evitar multas onerosas.",
-            IconComponent: Zap,
+            imageSrc: spdaImage,
         },
         {
             title: "MPS e DPS",
             description: "O MPS (Medidas de Proteção Contra Surtos) utiliza o DPS (Dispositivo de Proteção Contra Surtos) para proteger sua rede contra picos de tensão e corrente. Surtos danificam eletrônicos e são causados por raios distantes ou manobras da concessionária. A instalação de DPS é crucial em todas as edificações.",
-            IconComponent: Shield,
+            imageSrc: mpsImage,
         },
         {
             title: "Aterramento Elétrico",
             description: "Fornece um caminho seguro para correntes elétricas indesejadas fluírem para a terra. É vital para a proteção de pessoas contra choques e a preservação de equipamentos, funcionando como uma 'válvula de segurança' para correntes de fuga e curtos-circuitos.",
-            IconComponent: Globe,
+            imageSrc: groundingImage,
         },
         {
             title: "Gerenciamento de Risco (Laudo)",
             description: "Realizamos o estudo de Gerenciamento de Risco de SPDA para determinar o Nível de Proteção necessário, seguindo a NBR 5419:2015. Este estudo é a base para a implementação do sistema e garante que a proteção esteja dimensionada corretamente para o seu tipo de edificação e atividade.",
-            IconComponent: Shield,
+            imageSrc: riskImage,
         },
     ];
 
     return (
         <div className="w-full relative overflow-x-hidden min-h-screen">
+
             <header className="py-32 px-4 md:px-8 text-black bg-[#F7F5F2] w-full">
                 <div className="max-w-7xl mx-auto text-center">
                     <CloudLightning className="w-20 h-20 text-yellow-500 mx-auto mb-4" />
@@ -64,6 +71,7 @@ const ProtectionPage = () => {
                     </a>
                 </div>
             </header>
+
 
             <section className="py-16 bg-white px-4 md:px-8">
                 <div className="max-w-7xl mx-auto text-center">
@@ -90,7 +98,6 @@ const ProtectionPage = () => {
                 </div>
             </section>
 
-
             <section id="detalhes" className="w-full bg-gray-50 py-24 px-4 md:px-8">
                 <div className="max-w-7xl mx-auto text-left">
                     <h2 className="font-[ranade] text-5xl font-bold text-gray-900 mb-4">
@@ -100,24 +107,33 @@ const ProtectionPage = () => {
                         Análise de Risco, Manutenção Preditiva e Conformidade com as normas NBR 5419.
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 text-left">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
                         {protectionPillars.map((pillar, index) => (
                             <ProtectionServiceCard
                                 key={index}
                                 title={pillar.title}
-                                IconComponent={pillar.IconComponent}
+                                imageSrc={pillar.imageSrc}
                                 description={pillar.description}
                             />
                         ))}
                     </div>
                 </div>
             </section>
+
+            <div className="relative z-10 bg-white/90">
+                <TerritoryOfOperation />
+            </div>
+
+            <div className="relative z-10 md:py-15 bg-white/90">
+                <FinalCTA />
+            </div>
+
             <div className="relative z-10 bg-transparent">
                 <ContactSection />
             </div>
-
         </div>
     );
 };
 
 export default ProtectionPage;
+
